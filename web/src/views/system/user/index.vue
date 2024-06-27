@@ -27,6 +27,7 @@
           </el-tree>
         </el-card>
       </el-col>
+
       <el-col xs="24" :sm="16" :md="18" :lg="20" :xl="20" class="p-1">
         <el-card :body-style="{ height: '100%' }">
           <fs-crud ref="crudRef" v-bind="crudBinding">

@@ -1,7 +1,7 @@
 import { request } from '/@/utils/service';
 import { UserPageQuery, AddReq, DelReq, EditReq, InfoReq } from '@fast-crud/fast-crud';
 
-export const apiPrefix = '/api/knowledge/knowledge_store/';
+export const apiPrefix = '/api/knowledge/repository/';
 export function GetList(query: UserPageQuery) {
 	return request({
 		url: apiPrefix,
@@ -18,7 +18,7 @@ export function GetObj(id: InfoReq) {
 
 export function AddObj(obj: AddReq) {
 	return request({
-		url: apiPrefix,
+		url: apiPrefix + 'create/',
 		method: 'post',
 		data: obj,
 	});

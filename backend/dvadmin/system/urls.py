@@ -18,6 +18,7 @@ from dvadmin.system.views.role_menu_button_permission import RoleMenuButtonPermi
 from dvadmin.system.views.system_config import SystemConfigViewSet
 from dvadmin.system.views.user import UserViewSet
 from dvadmin.system.views.menu_field import MenuFieldViewSet
+from dvadmin.knowledge.views import KnowledgeViewSet
 
 system_url = routers.SimpleRouter()
 system_url.register(r'menu', MenuViewSet)
@@ -35,7 +36,6 @@ system_url.register(r'message_center', MessageCenterViewSet)
 system_url.register(r'role_menu_button_permission', RoleMenuButtonPermissionViewSet)
 system_url.register(r'role_menu_permission', RoleMenuPermissionViewSet)
 system_url.register(r'column', MenuFieldViewSet)
-
 
 urlpatterns = [
     path('user/export/', UserViewSet.as_view({'post': 'export_data', })),

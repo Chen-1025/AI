@@ -98,7 +98,10 @@ urlpatterns = (
                 schema_view.with_ui("redoc", cache_timeout=0),
                 name="schema-redoc",
             ),
+
             path("api/system/", include("dvadmin.system.urls")),
+            path("api/knowledge/", include("dvadmin.knowledge.urls")),
+
             path("api/login/", LoginView.as_view(), name="token_obtain_pair"),
             path("api/logout/", LogoutView.as_view(), name="token_obtain_pair"),
             path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
